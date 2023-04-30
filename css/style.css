@@ -100,6 +100,7 @@ summary {
   left: calc(50% - 126px);
 }
 .accordion__summary {
+  --GAP: 3rem;
   cursor: pointer;
   align-items: center;
   justify-content: space-between;
@@ -203,15 +204,16 @@ summary {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1100px) {
   .accordion {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1000px;
-    min-height: 550px;
+    width: auto;
+    gap: 1rem;
+    min-height: 480px;
     max-width: 100rem;
-    padding: 3rem 0;
+    padding: 0rem 0;
     background-image: url("/images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -223,9 +225,9 @@ summary {
   /* boxes */
 
   .text-box {
-    flex-grow: 1;
-    max-width: 55ch;
-    padding-right:  8em;
+   
+    max-width: 50ch;
+    padding-right:  7em;
     text-align: left;
   }
   .text-box .center {

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+
+  <body
+    class="bg--gradient flex"
+    style="justify-content: center; align-items: center"
+  >
+    <main>
+      <article class="accordion box bg--white position-relative">
+        <div class="picture-box ">
+          <picture class="accordion__box">
+            <source
+              media="(min-width:768px)"
+              srcset="./images/illustration-box-desktop.svg"
+            />
+            <img src="" alt="box with @ symbol on top" />
+          </picture>
+          <picture class="accordion__ilustration">
+            <source
+              media="(min-width:768px)"
+              srcset="images/illustration-woman-online-desktop.svg"
+            />
+            <img
+              src="images/illustration-woman-online-mobile.svg"
+              alt="woman reading notifications on huge monitor"
+            />
+          </picture>
+        </div>
+        <div class="text-box ">
+          <h2 class="fs-500 text--dark center fw-700 m-y" style="--MARGIN: 1.5rem;">FAQ</h2>
+          <details>
+            <summary
+              class="flex accordion__summary"
+              onclick="rotateArrow(this)"
+            >
+              How many team members can I invite?
+              <img
+                class="details-marker"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p class="m-y" style="--MARGIN: 0.5rem;">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </p>
+          </details>
+          <hr class="line m-y" />
+          <details>
+            <summary
+              class="flex accordion__summary"
+              onclick="rotateArrow(this)"
+            >
+              What is the maximum file upload size?
+              <img
+                class="details-marker"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p class="m-y" style="--MARGIN: 0.5rem;">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </details>
+          <hr class="line m-y" />
+          <details>
+            <summary
+              class="flex accordion__summary"
+              onclick="rotateArrow(this)"
+            >
+              How do I reset my password?
+              <img
+                class="details-marker"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p class="m-y" style="--MARGIN: 0.5rem;">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </p>
+          </details>
+          <hr class="line m-y" />
+          <details>
+            <summary
+              class="flex accordion__summary"
+              onclick="rotateArrow(this)"
+            >
+              Can I cancel my subscription?
+              <img
+                class="details-marker"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p class="m-y" style="--MARGIN: 0.5rem;">
+              Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </details>
+          <hr class="line m-y" />
+          <details>
+            <summary
+              class="flex accordion__summary"
+              onclick="rotateArrow(this)"
+            >
+              Do you provide additional support?
+              <img
+                class="details-marker"
+                src="images/icon-arrow-down.svg"
+                alt="arrow"
+              />
+            </summary>
+            <p class="m-y" style="--MARGIN: 0.5rem;">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </p>
+          </details>
+          <hr class="line m-y" />
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

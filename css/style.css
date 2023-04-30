@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* RESET */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--FF-SANS);
+  color: hsl(var(--CLR-LIGHT-TEXT));
+  font-size: var(--FS-100);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+picture,
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* special case  */
+summary {
+  list-style: none;
+}
+
+/* END RESET */
+
+/* CUSTOM PROPERTIES */
+:root {
+  /* Colors */
+  --CLR-DARK: 238 29% 16%;
+  --CLR-ACCENT: 14 88% 65%;
+
+  --CLR-FROM: 273, 75%, 66%;
+  --CLR-TO: 240 73% 65%;
+  --BG-GRADIENT: linear-gradient(hsl(var(--CLR-FROM)), hsl(var(--CLR-TO)));
+
+  /* text */
+  --CLR-DARK-TEXT: 237 12% 33%;
+  --CLR-LIGHT-TEXT: 240 6% 50%;
+
+  /* divider */
+  --CLR-DIVIDER: 240 5% 91%;
+
+  /* End  colors */
+
+  /* Typography */
+
+  --FF-SANS: "Kumbh Sans", sans-serif;
+
+  --FS-100: 0.85rem;
+  --FS-500: 2.2rem;
+
+  --FW-400: 400;
+  --FW-700: 700;
+  /* End typography */
+
+}
+/* END CUSTOM PROPERTIES */
+
+/* GENERAL STYLE */
+
+/* END GENERAL STYLE */
+
+/* BLOCKS */
+.accordion {
+  --PADDING: 1.7em;
+  --GAP: 1rem;
+
+  position: relative;
+  width: 21rem;
+  border-radius: 1rem;
+  padding-bottom: clamp(1em, 10%, 3em);
+  padding-top: 7em;
+  background-image: url("/images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+/* END BLOCKS */
+
+/* ELEMENTS */
+.accordion__ilustration {
+  position: absolute;
+  width: 75%;
+  top: -120px;
+  left: calc(50% - 126px);
+}
+.accordion__summary {
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+
+.accordion__summary:hover {
+  color: hsl(var(--CLR-ACCENT));
+}
+
+.accordion__box {
+  display: none;
+}
+/* END ELEMENTS */
+
+/* MODIFIERS */
+.bg--gradient {
+  background-image: var(--BG-GRADIENT);
+}
+
+.bg--white {
+  background-color: white;
+}
+
+.text--dark {
+  color: hsl(var(--CLR-DARK-TEXT));
+}
+
+/* END MODIFIERS */
+
+/* UTILITY */
+.flex {
+  display: flex;
+  gap: var(--GAP, 1rem);
+}
+.grid {
+  display: grid;
+  gap: var(--GAP, 1rem);
+}
+
+.box {
+  max-width: 75ch;
+  padding-inline: var(--PADDING, 1em);
+  margin-inline: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.fs-500 {
+  font-size: var(--FS-500);
+}
+.fw-700 {
+  font-weight: var(--FW-700);
+}
+.m-y {
+  margin: var(--MARGIN, 1rem) 0;
+}
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.details-marker {
+  display: inline;
+  transition-property: all;
+  transition-duration: 0.1s;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+}
+
+.line {
+  border: none;
+  border-bottom: 1px solid hsl(var(--CLR-DIVIDER));
+}
+
+.hidden {
+  display: none;
+}
+/* END UTILITY */
+
+/* MEDIA */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    min-height: 550px;
+    max-width: 100rem;
+    padding: 3rem 0;
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -600px -250px;
+
+    box-shadow: 0px 20px 10px #3333332d;
+    
+  }
+  /* boxes */
+
+  .text-box {
+    flex-grow: 1;
+    max-width: 55ch;
+    padding-right:  8em;
+    text-align: left;
+  }
+  .text-box .center {
+    text-align: left;
+  }
+  .picture-box {
+    overflow: hidden;
+  }
+  .accordion__ilustration { 
+   
+    position: relative;
+    top: 22%;
+    left: -100px;
+    width: 100%;
+  }
+
+  .position-relative {
+    position: relative;
+  }
+  .accordion__box {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: -120px;
+    z-index: 2;
+  }
+}
+/* END MEDIA */

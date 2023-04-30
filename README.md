@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GITHUB](https://github.com/RadasinR/faq-accordion-card.git)
+- Live Site URL: [LIVE SITE](https://faq-accordion-card-weld-eta.vercel.app/)
 
 ## My process
 
